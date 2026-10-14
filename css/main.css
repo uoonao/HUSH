@@ -1,0 +1,1497 @@
+@charset "UTF-8";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+:root {
+    /* Background */
+    --color-bg: #0C1528;
+    --color-bg2: #1C1D30;
+    --color-elevated: #1F2937;
+
+    /* Text */
+    --color-text-main: #F3F4F6;
+    --color-text-secondary: #9CA3AF;
+
+    /* Point */
+    --color-blue-muted: #475569;
+    --color-purple-muted: #6B7280;
+    --color-warm: #4B4037;
+    --accent-bb: rgba(192, 206, 253, 0.6);
+
+    /* Radius */
+    --radius-round: 999px;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 72px;
+
+    z-index: 100;
+}
+
+.header_inner {
+    width: calc(100% - 112px);
+    max-width: 1320px;
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+.header_inner a img {
+    width: 140px;
+    height: 50px;
+}
+
+
+/* GNB */
+
+.gnb {
+    margin-left: auto;
+    margin-right: 42px;
+
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.gnb a {
+    font-size: 20px;
+    font-weight: 400;
+
+    color: var(--color-text-secondary);
+
+    transition: .3s;
+}
+
+.gnb a:hover {
+    color: var(--color-text-main);
+}
+
+
+/* HEADER ICON */
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    list-style: none;
+}
+
+.header_right li {
+    display: flex;
+    align-items: center;
+}
+.header_right .tm {
+    display: none;
+}
+
+.header_right a {
+    display: flex;
+    align-items: center;
+}
+
+.header_right li img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    opacity: .7;
+    transition: .3s;
+    fill: var(--color-text-secondary);
+}
+
+.header_right a:hover img {
+    opacity: 1;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 827px;
+
+    overflow: hidden;
+}
+
+
+/* BACKGROUND */
+
+.hero_bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero_bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* HERO CONTENT */
+
+.hero_inner {
+    position: relative;
+
+    z-index: 2;
+
+    width: calc(100% - 112px);
+    max-width: 1320px;
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* HERO TEXT */
+
+.hero_text {
+    margin-top: 260px;
+}
+
+.text_top {
+    margin-bottom: 25px;
+
+    font-size: 26px;
+    font-weight: 600;
+
+    color: var(--accent-bb);
+}
+
+.text_title {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+}
+
+.hero_bottom {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--accent-bb);
+    margin-bottom: 100px;
+}
+
+
+/* SEARCH */
+
+.search_box {
+    margin-bottom: 120px;
+    width: 588px;
+    height: 54px;
+
+    padding: 10px 37px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid var(--color-text-main);
+    border-radius: var(--radius-round);
+
+    background: rgba(20,35,60,.15);
+    backdrop-filter: blur(8px);
+}
+
+.search_box input {
+    flex: 1;
+
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: var(--color-text-main);
+
+    font-size: 17px;
+}
+
+.search_box input::placeholder {
+    color: var(--color-text-main);
+}
+
+.search_box button {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    background: transparent;
+}
+
+.search_box button img {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+
+    opacity: .8;
+}
+
+/* 20261007 17:49 여기까지 수정 완료 */
+
+/* HERO INFO */
+
+.sleep_info {
+    margin-top: 200px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.info_box a {
+    width: 180px;
+    height: 54px;
+
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid var(--color-text-secondary);
+    border-radius: var(--radius-round);
+
+    font-size: 20px;
+    color: var(--color-text-secondary);
+}
+.info_box img {
+    width: 32px;
+    opacity: .7;
+}
+
+
+/* ==================================================
+   COMMON SECTION
+================================================== */
+
+.section {
+    padding: 100px 0;
+}
+
+.section_inner {
+    width: calc(100% - 112px);
+    max-width: 1320px;
+
+    margin: 0 auto;
+}
+
+
+/* SECTION TITLE */
+
+.section_title h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.section_title h2 span {
+    display: flex;
+    align-items: center;
+}
+
+.section_title h2 span a {
+    display: flex;
+    align-items: center;
+}
+
+.section_title h2 span img {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+}
+
+.section_title p {
+    margin-top: 28px;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* ==================================================
+   TRENDING
+================================================== */
+
+.trending {
+    background: var(--color-bg);
+}
+
+.trend_slider {
+    position: relative;
+
+    margin: 100px 0 60px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* CARD LIST */
+
+.trend_list {
+    width: 100%;
+
+    padding: 0 60px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+
+/* CARD */
+
+.trend_card {
+    display: block;
+
+    aspect-ratio: 1 / .72;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.trend_card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+.trend_card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ARROW */
+
+.arrow {
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.05);
+}
+
+.arrow img {
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+
+    opacity: .7;
+}
+
+.arrow.prev {
+    left: 0;
+}
+
+.arrow.next {
+    right: 0;
+}
+
+
+/* MOBILE MORE */
+
+.mobile_more {
+    display: none;
+}
+
+
+/* ==================================================
+   MOOD
+================================================== */
+
+.mood {
+    background: var(--color-bg2);
+}
+
+.mood_content {
+    margin-top: 100px;
+
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 150px;
+
+    align-items: center;
+}
+
+.mood_content .mood_images.mood_m {
+    display: none;
+}
+
+
+/* LEFT */
+
+.mood_left {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* TAG */
+
+.mood_tags {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+
+    gap: 30px 70px;
+}
+
+.mood_tags a {
+    height: 54px;
+
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 1px solid var(--color-text-secondary);
+    border-radius: var(--radius-round);
+
+    color: var(--color-text-secondary);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+.mood_tags .tm {
+    display: none;
+}
+
+.mood_tags a img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+
+    opacity: .7;
+}
+
+
+/* MORE BUTTON */
+
+.more_btn {
+    margin-top: 85px;
+
+    width: 430px;
+    height: 54px;
+
+    padding: 10px 37px;
+
+    border: 0;
+    border-radius: var(--radius-round);
+
+    background: var(--color-purple-muted);
+
+    color: var(--color-text-main);
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.more_btn a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.more_btn span {
+    display: flex;
+    align-items: center;
+}
+
+.more_btn span img {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+}
+
+
+/* MOOD IMAGES */
+
+.mood_images {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 24px;
+}
+
+.mood_img {
+    display: block;
+
+    overflow: hidden;
+
+    border-radius: 23px;
+}
+
+.mood_img.large {
+    grid-row: span 2;
+}
+
+.mood_img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+.mood_img:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ==================================================
+   AMBIENT
+================================================== */
+
+.ambient {
+    background: var(--color-bg);
+}
+
+.ambient_list {
+    margin-top: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 35px;
+}
+
+.ambient_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ambient_icon {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.04);
+
+    transition: .3s;
+}
+
+.ambient_icon img {
+    width: 40px;
+    height: 40px;
+
+    object-fit: contain;
+
+    opacity: .7;
+}
+
+.ambient_item span {
+    margin-top: 20px;
+
+    font-size: 16px;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* hover */
+
+.ambient_item:hover .ambient_icon {
+    border: 2px solid #C98200;
+
+    background: rgba(201,130,0,.05);
+}
+
+.ambient_item:hover .ambient_icon img {
+    opacity: 1;
+}
+
+.ambient_item:hover span {
+    color: var(--color-text-main);
+}
+
+
+/* ==================================================
+   PLAYLIST
+================================================== */
+
+.playlist {
+    background: var(--color-bg2);
+}
+
+.playlist_grid {
+    margin-top: 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 60px 24px;
+}
+
+
+/* VIDEO CARD */
+
+.video_card {
+    min-width: 0;
+    display: block;
+}
+
+.thumbnail {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1.7 / 1;
+
+    overflow: hidden;
+
+    border-radius: 10px;    
+}
+
+.thumbnail > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+.video_card:hover .thumbnail > img {
+    transform: scale(1.05);
+}
+
+
+/* LABEL */
+
+.category,
+.duration {
+    position: absolute;
+    top: 15px;
+
+    padding: 6px 10px;
+
+    border-radius: 60px;
+
+    background: rgba(60, 60, 60, 0.4);
+    border: 1px solid rgba(60, 60, 60, 0.1);
+
+    color: var(--color-text-main);
+
+    font-size: 12px;
+    line-height: 1;
+}
+
+.category {
+    left: 7px;
+}
+
+.duration {
+    right: 7px;
+}
+
+
+/* VIDEO TITLE */
+
+.video_card h3 {
+    margin-top: 15px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+.video_card > p {
+    margin-top: 10px;
+
+    font-size: 13px;
+
+    color: var(--color-text-muted);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    padding: 55px 0;
+
+    background: var(--color-elevated);
+}
+
+.footer_inner {
+    width: calc(100% - 112px);
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.footer_logo a img {
+    width: 140px;
+    height: 50px;
+}
+
+.footer_logo p {
+    margin-top: 30px;
+
+    font-size: 13px;
+    line-height: 1.3;
+
+    color: var(--color-text-secondary);
+}
+
+.footer_logo span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: var(--color-text-secondary);
+}
+
+
+/* SOCIAL */
+
+.social {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+}
+
+.social img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+
+    opacity: .7;
+}
+
+
+
+
+
+/* 20261008 17:48 여기까지함. 다음에 반응형부터 수정하면 됨. */
+
+
+
+
+/* ==================================================
+   TABLET
+   768px ~ 1199px
+================================================== */
+
+@media (max-width: 1199px) {
+
+    .header_inner,
+    .hero_inner,
+    .section_inner,
+    .footer_inner {
+        width: calc(100% - 80px);
+    }
+
+    /* HEADER */
+
+    .gnb {
+        display: none;
+    }
+
+    .header_right {
+        margin-left: auto;
+        gap: 17px;
+    }
+    .header_right .tm {
+        display: block;
+    }
+    .header_right a img {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 827px;
+    }
+
+    .hero_text {
+        margin-top: 300px;
+    }
+
+    .text_top {
+        font-size: 20px;
+    }
+
+    .text_title {
+        font-size: 44px;
+    }
+
+    .hero_bottom {
+        font-size: 26px;
+    }
+
+    .search_box {
+        width: 440px;
+        margin-top: 35px;
+    }
+
+
+    /* INFO */
+
+    .sleep_info {
+        gap: 18px;
+    }
+    .info_box a {
+        width: 138px;
+        padding: 10px;
+    }
+
+
+    /* TRENDING */
+
+
+    .trend_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trend_card:nth-child(n+3) {
+        display: none;
+    }
+
+
+    /* MOOD */
+
+    .mood_content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .mood_left {
+        align-items: center;
+    }
+
+    .mood_tags {
+        justify-content: center;
+    }
+
+    .mood_content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    }
+
+    .mood_images {
+        width: 70%;
+        margin: 100px auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto auto;
+        gap: 32px 20px;
+    }
+
+    .mood_img {
+        width: 100%;
+        aspect-ratio: 1 / 0.85;
+        border-radius: 25px;
+    }
+
+    /* 첫 번째 이미지의 세로 확장 해제 */
+    .mood_img.large {
+        grid-row: auto;
+    }
+
+    /* 세 번째 이미지를 아래 가운데에 배치 */
+    .mood_img:nth-child(3) {
+        grid-column: 1 / 3;
+        justify-self: center;
+        width: 60%;
+    }
+
+    .mood_img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* AMBIENT */
+    .ambient_icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* PLAYLIST */
+
+    .playlist_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FOOTER */
+    .footer_logo p {
+        display: none;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   ~ 767px
+================================================== */
+
+@media (max-width: 767px) {
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section_inner {
+        width: calc(100% - 36px);
+    }
+    .section_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .section h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+    .section span a img {
+        display: none;
+    }
+    .section_title p {
+        display: none;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        height: 55px;
+    }
+
+    .header_inner {
+        width: calc(100% - 34px);
+    }
+
+    .header_inner a img {
+        width: 90px;
+        height: 35px;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .header_right {
+        margin-left: auto;
+        gap: 15px;
+    }
+    .header_right .pc {
+        display: none;
+    }
+
+    .header_right li img {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 844px;
+    }
+
+    .hero_inner {
+        width: calc(100% - 36px);
+    }
+
+    .hero_bg img {
+        object-position: center;
+    }
+
+
+    /* TEXT */
+    .hero_inner {
+        display: block;
+    }
+    .hero_text {
+        margin-top: 380px;
+        text-align: center;
+    }
+
+    .text_top {
+        margin-bottom: 27px;
+        font-size: 17px;
+    }
+
+    .text_title {
+        font-size: 32px;
+    }
+
+    .hero_bottom {
+        display: none;
+    }
+
+
+    /* SEARCH */
+
+    .search_box {
+        display: none;
+    }
+
+
+    /* INFO */
+
+    .sleep_info {
+        margin-top: 150px;
+        position: static;
+        justify-content: center;
+        margin: 150px auto 0;
+        flex-direction: row;
+        gap: 130px;
+    }
+
+
+    /* TRENDING */
+
+    .trending {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .trend_slider {
+        margin-top: 44px;
+    }
+
+    .trend_list {
+        display: flex;
+
+        padding: 0 60px;
+
+        overflow: hidden;
+    }
+
+    .trend_card {
+        flex: 0 0 100%;
+
+        aspect-ratio: 1.8 / 1;
+    }
+
+    .trend_card:nth-child(n+2) {
+        display: none;
+    }
+
+
+    /* ARROWS */
+
+    .arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .arrow img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    /* MORE */
+
+    .mobile_more {
+        display: none;
+    }
+
+/* 페이지 표시 점 */
+.trend_dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.trend_dots span {
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: #687080;
+}
+
+.trend_dots span.active {
+    width: 20px;
+    border-radius: 10px;
+    background: #F3F4F6;
+}
+
+
+    /* MOOD */
+
+    .mood {
+        padding: 56px 0;
+    }
+
+    .mood_content {
+        margin-top: 63px;
+        display: flex;
+        flex-direction: column;
+        gap: 95px;
+    }
+
+
+    /* TAGS */
+
+    .mood_left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .mood_tags {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .mood_tags a {
+        height: 36px;
+
+        padding: 8 20px;
+
+        gap: 3px;
+
+        font-size: 17px;
+    }
+
+    .mood_tags a img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    /* MORE BUTTON */
+
+    .more_btn {
+        width: 358px;
+        height: 40px;
+
+        margin-top: 30px;
+
+        font-size: 13px;
+    }
+
+    .more_btn a {
+        gap: 10px;
+    }
+
+    .more_btn span img {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* IMAGES */
+
+    .mood_content .mood_images.mood_pt {
+        display: none;
+    }
+    /* 모바일 카드 목록 */
+    .mood_content .mood_images.mood_m {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 450px;
+        margin-top: 24px;
+    }
+
+    /* 카드 전체 */
+    .mood_content .mood_images.mood_m .mood_card {
+        display: flex;
+        width: 100%;
+        height: 110px;
+        overflow: hidden;
+        border: 1px solid var(--accent-bb);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--color-text-main);
+    }
+
+    /* 왼쪽 이미지 영역 */
+    .mood_content .mood_images.mood_m .mood_thumb {
+        flex: 0 0 49%;
+        width: 49%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .mood_content .mood_images.mood_m .mood_thumb img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* 오른쪽 정보 영역 */
+    .mood_content .mood_images.mood_m .mood_info {
+        position: relative;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-width: 0;
+        padding: 10px;
+    }
+
+    /* 영상 제목 */
+    .mood_content .mood_images.mood_m .mood_info h3 {
+        margin: 0;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    /* 채널명 */
+    .mood_content .mood_images.mood_m .mood_info p.mood_channel {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        color: var(--color-text-secondary);
+        margin-top: 15px;
+        font-size: 13px;
+    }
+
+    /* 좋아요 + 숫자 */
+    .mood_content .mood_images.mood_m .mood_like {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 5px;
+        margin-top: auto;
+        color: var(--color-text-secondary);
+        font-size: 11px;
+        line-height: 1;
+    }
+
+    .mood_content .mood_images.mood_m .mood_like img {
+        display: block;
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+        opacity: 0.7;
+    }
+    /* AMBIENT */
+
+    .ambient {
+        padding: 52px 0 58px;
+    }
+
+    .ambient_list {
+        grid-template-columns: repeat(2, 120px);
+        justify-content: center;
+        gap: 70px 40px;
+    }
+
+    .ambient_item {
+        width: fit-content;
+        justify-self: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ambient_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ambient_icon img {
+        width: 28px;
+        height: 28px;
+    }
+    
+
+    .ambient_item span {
+        margin-top: 16px;
+        font-size: 16px;
+    }
+
+
+    /* PLAYLIST */
+
+    .playlist {
+        padding: 60px 0;
+    }
+
+    .playlist_grid {
+        margin-top: 50px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 75px
+    }
+
+
+    /* THUMBNAIL */
+
+    .video_card {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .thumbnail {
+        border-radius: 7px;
+    }
+
+    .category,
+    .duration {
+        top: 20px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .category {
+        left: 4px;
+    }
+
+    .duration {
+        right: 4px;
+    }
+
+
+    /* TEXT */
+
+    .video_card h3 {
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+    .video_card > p {
+        margin-top: 12px;
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 35px 0;
+    }
+
+    .footer_inner {
+        width: calc(100% - 36px);
+
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+
+    .footer_logo p {
+        display: none;
+    }
+
+    .footer_logo span {
+        display: none;
+    }
+
+    .social {
+        gap: 78px;
+        margin-top: 20px;
+    }
+
+    .social img {
+        width: 25px;
+        height: 25px;
+    }
+
+}
